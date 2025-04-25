@@ -234,7 +234,6 @@ def xp_assert_close(
 
     actual_np = as_numpy_array(actual, xp=xp)
     desired_np = as_numpy_array(desired, xp=xp)
-    # JAX/Dask arrays work directly with `np.testing`
     np.testing.assert_allclose(  # pyright: ignore[reportCallIssue]
         actual_np,
         desired_np,
